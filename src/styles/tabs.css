@@ -1,0 +1,12 @@
+.custom-tab{
+    color: #4a4a4a !important;
+    text-transform: uppercase !important;
+}
+
+.custom-tab:hover{
+    color:rgb(50, 191, 243) !important;
+}
+.active-custom{
+    color:rgb(50, 191, 243) !important;
+    border-bottom: 1px solid rgb(50, 191, 243);
+}

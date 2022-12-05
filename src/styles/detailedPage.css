@@ -1,0 +1,35 @@
+.detailed-head{
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+.author{
+    color:grey;
+    text-decoration: none;
+}
+
+.small-box {
+    padding-top: 10px;
+}
+.middle-box{
+    border-left: 1px solid;
+    border-right: 1px solid;
+}
+
+.small-box-top{
+    font-size: 40px;
+}
+
+.recipe-hr{
+    margin: 64px auto 56px;
+    opacity: 0.3;
+    max-width: 978px;
+    width: 100%;
+    color:grey;
+}
+
+.step{
+    font-weight:bolder !important;
+}
+.my-li{
+    margin-top: 15px;
+}
