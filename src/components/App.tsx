@@ -18,7 +18,7 @@ import Salads from "./pages/Salads";
 import Vegetarian from "./pages/Vegetarian";
 import SideDish from "./pages/SideDish";
 import { TabItemsNames } from "../resources/strings";
-import {Dishes} from "../resources/strings"
+import { Dishes } from "../resources/strings";
 
 function App() {
   const tabsBrowse: string[] = [];
@@ -31,16 +31,16 @@ function App() {
   tabsBrowse.push(TabItemsNames.SIDEDISH);
   tabsBrowse.push(TabItemsNames.VEGETARIAN);
 
-  const tabsDishes: string[] = []
-  tabsDishes.push(Dishes.brownie.name)
-  tabsDishes.push(Dishes.burger.name)
-  tabsDishes.push(Dishes.cake.name)
-  tabsDishes.push(Dishes.cookie.name)
-  tabsDishes.push(Dishes.lasagna.name)
-  tabsDishes.push(Dishes.pancake.name)
-  tabsDishes.push(Dishes.pie.name)
-  tabsDishes.push(Dishes.pizza.name)
-  tabsDishes.push(Dishes.sandwich.name)
+  const tabsDishes: string[] = [];
+  tabsDishes.push(Dishes.brownie.name);
+  tabsDishes.push(Dishes.burger.name);
+  tabsDishes.push(Dishes.cake.name);
+  tabsDishes.push(Dishes.cookie.name);
+  tabsDishes.push(Dishes.lasagna.name);
+  tabsDishes.push(Dishes.pancake.name);
+  tabsDishes.push(Dishes.pie.name);
+  tabsDishes.push(Dishes.pizza.name);
+  tabsDishes.push(Dishes.sandwich.name);
 
   const router = createBrowserRouter([
     {
@@ -56,7 +56,7 @@ function App() {
           path: `/browse/${TabItemsNames.QUICKANDEASY.toLowerCase()}`,
           element: (
             <div>
-            <Tabs tabs={tabsBrowse} path={"/browse/"} /> <QuickAndEasy />
+              <Tabs tabs={tabsBrowse} path={"/browse/"} /> <QuickAndEasy />
             </div>
           ),
         },
@@ -64,7 +64,7 @@ function App() {
           path: `/browse/${TabItemsNames.KIDFRIENDLY.toLowerCase()}`,
           element: (
             <div>
-            <Tabs tabs={tabsBrowse} path={"/browse/"} /> <KidFriendly />
+              <Tabs tabs={tabsBrowse} path={"/browse/"} /> <KidFriendly />
             </div>
           ),
         },
@@ -72,7 +72,7 @@ function App() {
           path: `/browse/${TabItemsNames.MAINDISH.toLowerCase()}`,
           element: (
             <div>
-             <Tabs tabs={tabsBrowse} path={"/browse/"} /> <MainDish />
+              <Tabs tabs={tabsBrowse} path={"/browse/"} /> <MainDish />
             </div>
           ),
         },
@@ -80,7 +80,8 @@ function App() {
           path: `/browse/${TabItemsNames.SIDEDISH.toLowerCase()}`,
           element: (
             <div>
-             <Tabs tabs={tabsBrowse} path={"/browse/"} /><SideDish />
+              <Tabs tabs={tabsBrowse} path={"/browse/"} />
+              <SideDish />
             </div>
           ),
         },
@@ -127,7 +128,12 @@ function App() {
         },
         {
           path: "/dishes/:dish",
-          element: <div> <Tabs tabs={tabsDishes} path={"/dishes/"}/>  <CardGroup /> </div>
+          element: (
+            <div>
+              {" "}
+              <Tabs tabs={tabsDishes} path={"/dishes/"} /> <CardGroup />{" "}
+            </div>
+          ),
         },
         // {
         //   path: "/browse/:name",
