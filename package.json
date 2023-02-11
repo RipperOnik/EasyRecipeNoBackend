@@ -1,5 +1,6 @@
 {
   "name": "cook-project",
+  "homepage": "https://ripperonik.github.io/EasyRecipeNoBackend/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -3,7 +3,7 @@ import "../styles/styles.css";
 import CardGroup from "./subcomponents/cards/CardGroup";
 import Home from "./pages/Home";
 import Layout from "./Layout";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./pages/ErrorPage";
 
 import Tabs from "./subcomponents/tabs/Tabs";
@@ -42,106 +42,105 @@ function App() {
   tabsDishes.push(Dishes.pizza.name);
   tabsDishes.push(Dishes.sandwich.name);
 
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Layout />,
-      errorElement: <ErrorPage />,
-      children: [
-        {
-          path: "/",
-          element: <Home />,
-        },
-        {
-          path: `/browse/${TabItemsNames.QUICKANDEASY.toLowerCase()}`,
-          element: (
-            <div>
-              <Tabs tabs={tabsBrowse} path={"/browse/"} /> <QuickAndEasy />
-            </div>
-          ),
-        },
-        {
-          path: `/browse/${TabItemsNames.KIDFRIENDLY.toLowerCase()}`,
-          element: (
-            <div>
-              <Tabs tabs={tabsBrowse} path={"/browse/"} /> <KidFriendly />
-            </div>
-          ),
-        },
-        {
-          path: `/browse/${TabItemsNames.MAINDISH.toLowerCase()}`,
-          element: (
-            <div>
-              <Tabs tabs={tabsBrowse} path={"/browse/"} /> <MainDish />
-            </div>
-          ),
-        },
-        {
-          path: `/browse/${TabItemsNames.SIDEDISH.toLowerCase()}`,
-          element: (
-            <div>
-              <Tabs tabs={tabsBrowse} path={"/browse/"} />
-              <SideDish />
-            </div>
-          ),
-        },
-        {
-          path: `/browse/${TabItemsNames.DESSERTS.toLowerCase()}`,
-          element: (
-            <div>
-              <Tabs tabs={tabsBrowse} path={"/browse/"} /> <Desserts />
-            </div>
-          ),
-        },
-        {
-          path: `/browse/${TabItemsNames.APPETIZERS.toLowerCase()}`,
-          element: (
-            <div>
-              <Tabs tabs={tabsBrowse} path={"/browse/"} /> <Appetizers />
-            </div>
-          ),
-        },
-        {
-          path: `/browse/${TabItemsNames.SALADS.toLowerCase()}`,
-          element: (
-            <div>
-              <Tabs tabs={tabsBrowse} path={"/browse/"} /> <Salads />
-            </div>
-          ),
-        },
-        {
-          path: `/browse/${TabItemsNames.VEGETARIAN.toLowerCase()}`,
-          element: (
-            <div>
-              <Tabs tabs={tabsBrowse} path={"/browse/"} /> <Vegetarian />
-            </div>
-          ),
-        },
+  const router = createHashRouter(
+    [
+      {
+        path: "/",
+        element: <Layout />,
+        errorElement: <ErrorPage />,
+        children: [
+          {
+            path: "/",
+            element: <Home />,
+          },
+          {
+            path: `/browse/${TabItemsNames.QUICKANDEASY.toLowerCase()}`,
+            element: (
+              <div>
+                <Tabs tabs={tabsBrowse} path={"/browse/"} /> <QuickAndEasy />
+              </div>
+            ),
+          },
+          {
+            path: `/browse/${TabItemsNames.KIDFRIENDLY.toLowerCase()}`,
+            element: (
+              <div>
+                <Tabs tabs={tabsBrowse} path={"/browse/"} /> <KidFriendly />
+              </div>
+            ),
+          },
+          {
+            path: `/browse/${TabItemsNames.MAINDISH.toLowerCase()}`,
+            element: (
+              <div>
+                <Tabs tabs={tabsBrowse} path={"/browse/"} /> <MainDish />
+              </div>
+            ),
+          },
+          {
+            path: `/browse/${TabItemsNames.SIDEDISH.toLowerCase()}`,
+            element: (
+              <div>
+                <Tabs tabs={tabsBrowse} path={"/browse/"} />
+                <SideDish />
+              </div>
+            ),
+          },
+          {
+            path: `/browse/${TabItemsNames.DESSERTS.toLowerCase()}`,
+            element: (
+              <div>
+                <Tabs tabs={tabsBrowse} path={"/browse/"} /> <Desserts />
+              </div>
+            ),
+          },
+          {
+            path: `/browse/${TabItemsNames.APPETIZERS.toLowerCase()}`,
+            element: (
+              <div>
+                <Tabs tabs={tabsBrowse} path={"/browse/"} /> <Appetizers />
+              </div>
+            ),
+          },
+          {
+            path: `/browse/${TabItemsNames.SALADS.toLowerCase()}`,
+            element: (
+              <div>
+                <Tabs tabs={tabsBrowse} path={"/browse/"} /> <Salads />
+              </div>
+            ),
+          },
+          {
+            path: `/browse/${TabItemsNames.VEGETARIAN.toLowerCase()}`,
+            element: (
+              <div>
+                <Tabs tabs={tabsBrowse} path={"/browse/"} /> <Vegetarian />
+              </div>
+            ),
+          },
 
-        {
-          path: "/recipe/:id",
-          element: <DetailedPage />,
-        },
-        {
-          path: "/feed/:type",
-          element: <CardGroup />,
-        },
-        {
-          path: "/dishes/:dish",
-          element: (
-            <div>
-              {" "}
-              <Tabs tabs={tabsDishes} path={"/dishes/"} /> <CardGroup />{" "}
-            </div>
-          ),
-        },
-        // {
-        //   path: "/browse/:name",
-        //   element: <div> <Tabs tabs={tabsBrowse} path={"/browse/"}/>  <CardGroup /> </div>
-        // }
-      ],
-    },
-  ]);
+          {
+            path: "/recipe/:id",
+            element: <DetailedPage />,
+          },
+          {
+            path: "/feed/:type",
+            element: <CardGroup />,
+          },
+          {
+            path: "/dishes/:dish",
+            element: (
+              <div>
+                {" "}
+                <Tabs tabs={tabsDishes} path={"/dishes/"} /> <CardGroup />{" "}
+              </div>
+            ),
+          },
+        ],
+      },
+    ],
+    { basename: "/" }
+  );
 
   return <RouterProvider router={router} />;
 }
