@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.currentNavbarID = exports.currentDetailedPageReducer = exports.currentTabItemReducer = exports.currentNavbarItemReducer = exports.currentFeedReducer = exports.navigateTab = exports.navigateNavbar = exports.navigateToDetailedPage = exports.navigateToFeed = void 0;
 var toolkit_1 = require("@reduxjs/toolkit");
 var strings_1 = require("../resources/strings");
-var api_1 = require("./api");
+var api_1 = require("../globalState/api");
 var currentNavbarItem = (0, toolkit_1.createSlice)({
     name: 'currentNavbarItem',
     initialState: { id: strings_1.NavbarItemsNames.HOME },
