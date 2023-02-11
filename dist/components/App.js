@@ -39,7 +39,7 @@ function App() {
     tabsDishes.push(strings_2.Dishes.pie.name);
     tabsDishes.push(strings_2.Dishes.pizza.name);
     tabsDishes.push(strings_2.Dishes.sandwich.name);
-    var router = (0, react_router_dom_1.createBrowserRouter)([
+    var router = (0, react_router_dom_1.createHashRouter)([
         {
             path: "/",
             element: react_1.default.createElement(Layout_1.default, null),
@@ -114,20 +114,16 @@ function App() {
                 },
                 {
                     path: "/dishes/:dish",
-                    element: react_1.default.createElement("div", null,
+                    element: (react_1.default.createElement("div", null,
                         " ",
                         react_1.default.createElement(Tabs_1.default, { tabs: tabsDishes, path: "/dishes/" }),
-                        "  ",
+                        " ",
                         react_1.default.createElement(CardGroup_1.default, null),
-                        " ")
+                        " ")),
                 },
-                // {
-                //   path: "/browse/:name",
-                //   element: <div> <Tabs tabs={tabsBrowse} path={"/browse/"}/>  <CardGroup /> </div>
-                // }
             ],
         },
-    ]);
+    ], { basename: "/" });
     return react_1.default.createElement(react_router_dom_1.RouterProvider, { router: router });
 }
 exports.default = App;

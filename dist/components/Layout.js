@@ -15,10 +15,9 @@ var Layout = function () {
     var pathname = (0, react_router_dom_2.useLocation)().pathname;
     var dispatch = (0, hooks_1.useAppDispatch)();
     (0, react_2.useEffect)(function () {
-        // window.scrollTo(0, 0);
         window.scrollTo({
             top: 0,
-            left: 0
+            left: 0,
         });
     }, [pathname]);
     (0, react_2.useEffect)(function () {
@@ -34,39 +33,75 @@ var Layout = function () {
     });
     (0, react_2.useEffect)(function () {
         if (pathname === "/dishes/brownie") {
-            dispatch((0, reducerActions_1.navigateToFeed)({ useQuery: function () { return api_1.useGetCertainDishPostsQuery; }, header: strings_2.Dishes.brownie.name, tag: strings_2.Dishes.brownie.tag }));
+            dispatch((0, reducerActions_1.navigateToFeed)({
+                useQuery: function () { return api_1.useGetCertainDishPostsQuery; },
+                header: strings_2.Dishes.brownie.name,
+                tag: strings_2.Dishes.brownie.tag,
+            }));
             dispatch((0, reducerActions_2.navigateTab)(strings_2.Dishes.brownie.name));
         }
         else if (pathname === "/dishes/burger") {
-            dispatch((0, reducerActions_1.navigateToFeed)({ useQuery: function () { return api_1.useGetCertainDishPostsQuery; }, header: strings_2.Dishes.burger.name, tag: strings_2.Dishes.burger.tag }));
+            dispatch((0, reducerActions_1.navigateToFeed)({
+                useQuery: function () { return api_1.useGetCertainDishPostsQuery; },
+                header: strings_2.Dishes.burger.name,
+                tag: strings_2.Dishes.burger.tag,
+            }));
             dispatch((0, reducerActions_2.navigateTab)(strings_2.Dishes.burger.name));
         }
         else if (pathname === "/dishes/cake") {
-            dispatch((0, reducerActions_1.navigateToFeed)({ useQuery: function () { return api_1.useGetCertainDishPostsQuery; }, header: strings_2.Dishes.cake.name, tag: strings_2.Dishes.cake.tag }));
+            dispatch((0, reducerActions_1.navigateToFeed)({
+                useQuery: function () { return api_1.useGetCertainDishPostsQuery; },
+                header: strings_2.Dishes.cake.name,
+                tag: strings_2.Dishes.cake.tag,
+            }));
             dispatch((0, reducerActions_2.navigateTab)(strings_2.Dishes.cake.name));
         }
         else if (pathname === "/dishes/cookie") {
-            dispatch((0, reducerActions_1.navigateToFeed)({ useQuery: function () { return api_1.useGetCertainDishPostsQuery; }, header: strings_2.Dishes.cookie.name, tag: strings_2.Dishes.cookie.tag }));
+            dispatch((0, reducerActions_1.navigateToFeed)({
+                useQuery: function () { return api_1.useGetCertainDishPostsQuery; },
+                header: strings_2.Dishes.cookie.name,
+                tag: strings_2.Dishes.cookie.tag,
+            }));
             dispatch((0, reducerActions_2.navigateTab)(strings_2.Dishes.cookie.name));
         }
         else if (pathname === "/dishes/lasagna") {
-            dispatch((0, reducerActions_1.navigateToFeed)({ useQuery: function () { return api_1.useGetCertainDishPostsQuery; }, header: strings_2.Dishes.lasagna.name, tag: strings_2.Dishes.lasagna.tag }));
+            dispatch((0, reducerActions_1.navigateToFeed)({
+                useQuery: function () { return api_1.useGetCertainDishPostsQuery; },
+                header: strings_2.Dishes.lasagna.name,
+                tag: strings_2.Dishes.lasagna.tag,
+            }));
             dispatch((0, reducerActions_2.navigateTab)(strings_2.Dishes.lasagna.name));
         }
         else if (pathname === "/dishes/pancake") {
-            dispatch((0, reducerActions_1.navigateToFeed)({ useQuery: function () { return api_1.useGetCertainDishPostsQuery; }, header: strings_2.Dishes.pancake.name, tag: strings_2.Dishes.pancake.tag }));
+            dispatch((0, reducerActions_1.navigateToFeed)({
+                useQuery: function () { return api_1.useGetCertainDishPostsQuery; },
+                header: strings_2.Dishes.pancake.name,
+                tag: strings_2.Dishes.pancake.tag,
+            }));
             dispatch((0, reducerActions_2.navigateTab)(strings_2.Dishes.pancake.name));
         }
         else if (pathname === "/dishes/pie") {
-            dispatch((0, reducerActions_1.navigateToFeed)({ useQuery: function () { return api_1.useGetCertainDishPostsQuery; }, header: strings_2.Dishes.pie.name, tag: strings_2.Dishes.pie.tag }));
+            dispatch((0, reducerActions_1.navigateToFeed)({
+                useQuery: function () { return api_1.useGetCertainDishPostsQuery; },
+                header: strings_2.Dishes.pie.name,
+                tag: strings_2.Dishes.pie.tag,
+            }));
             dispatch((0, reducerActions_2.navigateTab)(strings_2.Dishes.pie.name));
         }
         else if (pathname === "/dishes/pizza") {
-            dispatch((0, reducerActions_1.navigateToFeed)({ useQuery: function () { return api_1.useGetCertainDishPostsQuery; }, header: strings_2.Dishes.pizza.name, tag: strings_2.Dishes.pizza.tag }));
+            dispatch((0, reducerActions_1.navigateToFeed)({
+                useQuery: function () { return api_1.useGetCertainDishPostsQuery; },
+                header: strings_2.Dishes.pizza.name,
+                tag: strings_2.Dishes.pizza.tag,
+            }));
             dispatch((0, reducerActions_2.navigateTab)(strings_2.Dishes.pizza.name));
         }
         else if (pathname === "/dishes/sandwich") {
-            dispatch((0, reducerActions_1.navigateToFeed)({ useQuery: function () { return api_1.useGetCertainDishPostsQuery; }, header: strings_2.Dishes.sandwich.name, tag: strings_2.Dishes.sandwich.tag }));
+            dispatch((0, reducerActions_1.navigateToFeed)({
+                useQuery: function () { return api_1.useGetCertainDishPostsQuery; },
+                header: strings_2.Dishes.sandwich.name,
+                tag: strings_2.Dishes.sandwich.tag,
+            }));
             dispatch((0, reducerActions_2.navigateTab)(strings_2.Dishes.sandwich.name));
         }
         // else if (pathname === "/browse/appetizers") {
