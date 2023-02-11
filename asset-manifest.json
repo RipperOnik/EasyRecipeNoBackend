@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/EasyRecipeNoBackend/static/css/main.6e5c7723.css",
+    "main.js": "/EasyRecipeNoBackend/static/js/main.9c4b699f.js",
+    "static/js/787.c63ffb72.chunk.js": "/EasyRecipeNoBackend/static/js/787.c63ffb72.chunk.js",
+    "index.html": "/EasyRecipeNoBackend/index.html",
+    "main.6e5c7723.css.map": "/EasyRecipeNoBackend/static/css/main.6e5c7723.css.map",
+    "main.9c4b699f.js.map": "/EasyRecipeNoBackend/static/js/main.9c4b699f.js.map",
+    "787.c63ffb72.chunk.js.map": "/EasyRecipeNoBackend/static/js/787.c63ffb72.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6e5c7723.css",
+    "static/js/main.9c4b699f.js"
+  ]
+}

@@ -1,1 +1,0 @@
-{"version":3,"file":"ErrorPage.js","sourceRoot":"","sources":["../../../src/components/pages/ErrorPage.tsx"],"names":[],"mappings":";;AAAA,qDAAiD;AACjD,+BAA0B;AAE1B,SAAwB,SAAS;IAC/B,IAAM,KAAK,GAAG,IAAA,gCAAa,GAAE,CAAC;IAC9B,OAAO,CAAC,KAAK,CAAC,KAAK,CAAC,CAAC;IAErB,OAAO,CACL,uCAAK,EAAE,EAAC,YAAY;QAClB,kDAAc;QACd,oFAA+C,CAC3C,CACP,CAAC;AACJ,CAAC;AAVD,4BAUC"}
