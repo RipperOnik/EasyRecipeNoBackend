@@ -3,7 +3,7 @@ import Cuisine from "../../interfaces/Cuisine";
 import { Link } from "react-router-dom";
 import { useAppDispatch } from "../../../globalState/hooks";
 import { navigateToFeed } from "../../../globalState/reducerActions";
-import {useGetCuisinePostsQuery} from "../../../globalState/api"
+import { useGetCuisinePostsQuery } from "../../../globalState/api";
 
 function ScrollableItem(props: Cuisine) {
   const dispatch = useAppDispatch();
@@ -21,6 +21,7 @@ function ScrollableItem(props: Cuisine) {
       }
     >
       <div
+        className="round-img"
         style={{
           position: "relative",
           display: "inline-block",
@@ -32,7 +33,7 @@ function ScrollableItem(props: Cuisine) {
         <img
           src={props.iconImage}
           alt="img"
-          className="scrollable-item rounded-circle round-img"
+          className="scrollable-item rounded-circle"
         />
         <span className="text-image">{props.displayName}</span>
       </div>

@@ -35,31 +35,26 @@ div.scrollable::-webkit-scrollbar-thumb {
   height: auto;
 }
 
-.round-img:hover{
-    opacity: 0.5;
+.round-img {
+  transition: opacity ease-in-out;
 }
 
-
-.my-feed-main{
-    text-align: center;
+.round-img:hover {
+  opacity: 0.5;
 }
 
-.my-feed-main h1,h2{
-    margin: 30px 10px;
+.my-feed-main {
+  text-align: center;
+}
+
+.my-feed-main h1,
+h2 {
+  margin: 30px 10px;
 }
 
 .img-detailed {
-    width: 480px;
-    height: 480px;
-    background-size: cover;
-    border-radius: 10px;
+  width: 480px;
+  height: 480px;
+  background-size: cover;
+  border-radius: 10px;
 }
-
-
-
-
-
-
-
-
-

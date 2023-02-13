@@ -51,10 +51,13 @@ function FoodCard(props: DetailedPage) {
             alt="img"
             style={{ height: "250px" }}
           />
-          <div className="card-body" style={{ whiteSpace: "normal" }}>
+          <div
+            className="card-body"
+            style={{ whiteSpace: "normal", height: "240px" }}
+          >
             <h5
               className="card-title"
-              style={{ height: "3rem", fontSize: "1rem" }}
+              style={{ height: "40px", fontSize: "1rem" }}
             >
               {props.title}
             </h5>

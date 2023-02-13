@@ -5,7 +5,7 @@ import Dish from "../components/interfaces/Dish";
 export const NavbarItemsNames = {
   HOME: "Home",
   BROWSE: "Browse",
-  DISHES: "Dishes"
+  DISHES: "Dishes",
 };
 
 export const TabItemsNames = {
